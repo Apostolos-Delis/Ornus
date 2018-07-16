@@ -22,7 +22,7 @@
 
 pragma solidity ^0.4.11;
 
-interface SETTINGS {
+interface settings {
     function totalSupply() constant returns (uint256 total);
     function balanceOf(address _owner) constant returns (uint256 balance);
     function transfer(address _to, uint256 _value) returns (bool success);
