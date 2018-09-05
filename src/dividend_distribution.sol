@@ -40,7 +40,7 @@ contract DividendSplit {
         }
     }
 
-	function shareDividends() returns (bool success) {
+    function shareDividends() returns (bool success) {
         uint amount = msg.value / numShareholders;
 	
         for (uint i = 0; i < numShareholders; i++){
@@ -50,9 +50,9 @@ contract DividendSplit {
         Disburse(msg.value, numShareholders);
 	
         return true;
-	}
+    }
 	
-	function kill() {
+    function kill() {
         if (msg.sender == creator) suicide(creator)
     }
 }
